@@ -41,7 +41,7 @@
         arrows {
             display-name = "nav";
             bindings = <
-&trans  &trans  &trans     &trans        &trans  &ext_power EP_ON                              &ext_power EP_ON  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans  &trans                              &trans  &trans          &trans          &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &trans  &trans                              &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans  &trans                              &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans  &trans  &trans            &kp HOME  &trans  &trans          &trans          &trans           &trans  &trans
