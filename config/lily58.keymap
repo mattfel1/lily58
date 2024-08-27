@@ -10,6 +10,36 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    macros {
+        to_mac: to_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 0>;
+            label = "TO_MAC";
+        };
+
+        to_win: to_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &bt BT_SEL 1>;
+            label = "TO_WIN";
+        };
+
+        cerr: cerr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT>;
+            label = "CERR";
+        };
+
+        debug: debug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI LEFT LEFT>;
+            label = "DEBUG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,7 +59,7 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                                           &cerr     &debug          &trans          &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans          &trans          &trans           &trans  &trans
@@ -67,16 +97,15 @@
         numpad {
             display-name = "num";
             bindings = <
-&to 3   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
-                        &trans  &trans  &trans  &trans    &trans  &kp NUMBER_0  &trans        &trans
+&to_mac  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
+&to_win  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
+                         &trans  &trans  &trans  &trans    &trans  &kp NUMBER_0  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
-
 
