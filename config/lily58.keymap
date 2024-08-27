@@ -16,11 +16,11 @@
         default_layer {
             display-name = "mac";
             bindings = <
-&kp ESC    &kp N1   &kp N2  &kp N3    &kp N4    &kp N5                                            &kp N6   &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
-&kp TAB    &lt 2 Q  &kp W   &kp E     &kp R     &kp T                                             &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A    &kp S   &kp D     &kp F     &kp G                                             &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp MINUS
-&kp LSHFT  &lt 1 X  &kp X   &kp C     &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LALT  &kp LGUI  &kp SPACE  &kp ENTER           &kp BACKSPACE      &kp TAB  &kp EQUAL  &kp GRAVE
+&kp ESC    &kp N1   &kp N2       &kp N3          &kp N4              &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
+&kp TAB    &lt 2 Q  &kp W        &kp E           &kp R               &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A    &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G                                             &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp MINUS
+&kp LSHFT  &lt 1 X  &kp X        &kp C           &kp V               &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                 &kp LALT        &kp LGUI            &kp SPACE  &kp ENTER           &kp TAB            &kp BACKSPACE  &kp EQUAL  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -29,25 +29,52 @@
         numpad {
             display-name = "num";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans        &trans        &trans  &trans
+&to 3   &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans        &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp NUMBER_0  &trans        &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         arrows {
             display-name = "nav";
             bindings = <
-&trans  &trans  &trans     &trans        &trans  &trans                              &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &trans  &trans                              &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans  &trans                              &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans  &trans  &trans            &kp HOME  &trans  &trans          &trans          &trans           &trans  &trans
-                           &trans        &trans  &trans  &kp LEFT_SHIFT    &kp END   &trans  &trans          &trans
+&trans  &trans  &trans     &trans        &trans  &trans                                      &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &trans  &trans                                      &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans  &trans                                      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans  &trans          &trans            &kp HOME  &trans  &trans          &trans          &trans           &trans  &trans
+                           &trans        &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT    &kp END   &trans  &trans          &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        windows {
+            bindings = <
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lt 4 Z  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "windows";
+        };
+
+        win_numpad {
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "num";
         };
     };
 };
+
