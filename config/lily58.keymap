@@ -63,7 +63,7 @@
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans          &trans          &trans           &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &kp LEFT_SHIFT    &kp PAGE_DOWN  &kp HOME  &kp END         &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp HOME  &kp END         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -76,7 +76,7 @@
 &trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans   &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &kp LEFT_SHIFT    &kp PAGE_DOWN  &kp HOME  &kp END  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &kp trans    &kp PAGE_DOWN  &kp HOME  &kp END  &trans
             >;
 
             label = "nav";
