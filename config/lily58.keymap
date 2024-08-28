@@ -76,7 +76,7 @@
 &trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans   &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &kp trans    &kp PAGE_DOWN  &kp HOME  &kp END  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp HOME  &kp END  &trans
             >;
 
             label = "nav";
@@ -91,7 +91,7 @@
                          &trans  &kp LEFT_ALT  &trans  &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
-            label = "windows";
+            label = "windowslongnametest";
         };
 
         numpad {
