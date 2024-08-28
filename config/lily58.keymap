@@ -28,15 +28,25 @@
         cerr: cerr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings = <&macro_tap_time 1>, <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
             label = "CERR";
         };
 
         debug: debug {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
+            bindings = <&macro_tap_time 20>, <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
             label = "DEBUG";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <36 49>;
+            #layers = <0 1...>;
         };
     };
 
@@ -46,11 +56,11 @@
         default_layer {
             display-name = "mac";
             bindings = <
-&kp ESC                  &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
-&kp TAB                  &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp SQT                  &lt 2 A  &kp S   &kp D      &kp F     &kp G                                             &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp MINUS
-&mt LEFT_SHIFT CAPSLOCK  &lt 4 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                          &kp LCTRL  &kp LGUI  &kp SPACE  &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp EQUAL  &kp GRAVE
+&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
+&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp SQT     &lt 2 A  &kp S   &kp D      &kp F     &kp G                                             &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp MINUS
+&kp LSHIFT  &lt 4 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                             &kp LCTRL  &kp LGUI  &kp SPACE  &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp EQUAL  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -59,11 +69,11 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                                           &cerr     &debug          &trans          &trans           &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans          &trans          &trans           &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp HOME  &kp END         &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr          &debug          &trans          &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans         &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans          &trans          &trans           &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -72,11 +82,11 @@
 
         mac_nav {
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                                           &trans    &trans   &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans            &kp PAGE_UP    &trans    &trans   &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp HOME  &kp END  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans  &trans
             >;
 
             label = "nav";
