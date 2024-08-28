@@ -91,7 +91,7 @@
                          &trans  &kp LEFT_ALT  &trans  &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
-            label = "windowslongnametest";
+            label = "windows";
         };
 
         numpad {
