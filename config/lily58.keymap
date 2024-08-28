@@ -46,7 +46,6 @@
         combo_capslock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <36 49>;
-            #layers = <0 1...>;
         };
     };
 
