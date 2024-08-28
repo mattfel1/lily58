@@ -1,13 +1,6 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     macros {
@@ -21,21 +14,27 @@
         to_win: to_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 3 &bt BT_SEL 1>;
+            bindings = <&to 4 &bt BT_SEL 1>;
             label = "TO_WIN";
         };
 
         cerr: cerr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap_time 1>, <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings =
+                <&macro_tap_time 1>,
+                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+
             label = "CERR";
         };
 
         debug: debug {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap_time 20>, <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
+            bindings =
+                <&macro_tap_time 20>,
+                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
+
             label = "DEBUG";
         };
     };
@@ -55,10 +54,10 @@
         default_layer {
             display-name = "mac";
             bindings = <
-&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
-&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp SQT     &lt 2 A  &kp S   &kp D      &kp F     &kp G                                             &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp MINUS
-&kp LSHIFT  &lt 4 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
+&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
+&kp SQT     &lt 2 A  &kp S   &kp D      &kp F     &kp G                                             &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp MINUS
+&kp LSHIFT  &lt 8 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
                              &kp LCTRL  &kp LGUI  &kp SPACE  &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp EQUAL  &kp GRAVE
             >;
 
@@ -91,26 +90,75 @@
             label = "nav";
         };
 
+        mac_nav_rhs {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans         &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans
+            >;
+
+            label = "nav_rhs";
+        };
+
         windows {
             bindings = <
-&trans  &trans   &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lt 4 Z  &trans  &trans  &trans        &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 5 Q  &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 6 A  &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &lt 7 SEMICOLON  &trans
+&trans  &lt 8 Z  &trans  &trans  &trans        &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
                          &trans  &kp LEFT_ALT  &trans  &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
             label = "windows";
         };
 
+        windows_arrows {
+            label = "arrow";
+            display-name = "arrow";
+            bindings = <
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr          &debug          &trans          &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans         &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans          &trans          &trans           &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        windows_nav {
+            label = "nav";
+            bindings = <
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans  &trans
+            >;
+        };
+
+        windows_nav_rhs {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
+            >;
+
+            label = "nav_rhs";
+        };
+
         numpad {
             display-name = "num";
             bindings = <
-&to_mac  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&to_win  &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
-&trans   &trans  &trans  &trans  &trans  &trans                    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
-                         &trans  &trans  &trans  &trans    &trans  &kp NUMBER_0  &trans        &trans
+&to_mac  &kp F1  &kp F2  &kp F3      &kp F4  &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
+&to_win  &trans  &trans  &trans      &trans  &trans                        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
+&trans   &trans  &trans  &trans      &trans  &trans                        &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans
+&trans   &trans  &trans  &trans      &trans  &trans  &trans        &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
+                         &bt BT_NXT  &trans  &trans  &bt BT_CLR    &trans  &kp NUMBER_0  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
