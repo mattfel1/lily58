@@ -154,11 +154,11 @@
         numpad {
             display-name = "num";
             bindings = <
-&to_mac  &kp F1  &kp F2  &kp F3      &kp F4  &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&to_win  &trans  &trans  &trans      &trans  &trans                        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
-&trans   &trans  &trans  &trans      &trans  &trans                        &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans
-&trans   &trans  &trans  &trans      &trans  &trans  &trans        &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
-                         &bt BT_NXT  &trans  &trans  &bt BT_CLR    &trans  &kp NUMBER_0  &trans        &trans
+&to_mac  &kp F1   &kp F2  &kp F3      &kp F4  &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
+&to_win  &kp F15  &kp F16  &kp F17      &kp F18  &kp F19                        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
+&trans   &kp F20   &kp F21  &kp F22      &kp F23  &kp F24                        &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
+&trans   &trans   &trans  &trans      &trans  &trans  &trans        &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &kp F14
+                          &bt BT_NXT  &trans  &trans  &bt BT_CLR    &trans  &kp NUMBER_0  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
