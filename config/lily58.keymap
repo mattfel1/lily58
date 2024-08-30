@@ -23,7 +23,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp COLON &kp COLON &kp E &kp N &kp D &kp L &kp SEMI &kp LEFT>;
 
             label = "CERR";
         };
@@ -65,11 +65,11 @@
         default_layer {
             display-name = "mac";
             bindings = <
-&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                            &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                             &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
-&kp SQT     &lt 2 A  &kp S   &kp D      &kp F     &kp G                                             &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp MINUS
-&kp LSHIFT  &lt 8 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
-                             &kp LCTRL  &kp LGUI  &kp SPACE  &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp EQUAL  &kp GRAVE
+&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &lt 9 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
+&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                  &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
+&kp SQT     &lt 2 A  &kp S   &kp D      &kp F     &kp G                                                  &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp MINUS
+&kp LSHIFT  &lt 8 Z  &kp X   &kp C      &kp V     &kp B           &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
+                             &kp LCTRL  &kp LGUI  &kp SPACE       &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp EQUAL  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -98,7 +98,7 @@
                            &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans  &trans
             >;
 
-            label = "nav";
+            label = "mac_nav";
         };
 
         mac_nav_rhs {
@@ -110,16 +110,16 @@
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
-            label = "nav_rhs";
+            label = "mac_rnav";
         };
 
         windows {
             bindings = <
-&trans  &trans   &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 5 Q  &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 6 A  &trans  &trans  &trans        &trans                          &trans  &trans  &trans  &trans  &lt 7 SEMICOLON  &trans
-&trans  &lt 8 Z  &trans  &trans  &trans        &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
-                         &trans  &kp LEFT_ALT  &trans  &trans    &kp LEFT_WIN  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans        &lt 9 N5                          &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 5 Q  &trans  &trans  &trans        &trans                            &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 6 A  &trans  &trans  &trans        &trans                            &trans  &trans  &trans  &trans  &lt 7 SEMICOLON  &trans
+&trans  &lt 8 Z  &trans  &trans  &trans        &trans    &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
+                         &trans  &kp LEFT_ALT  &trans    &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
             label = "windows";
@@ -140,7 +140,7 @@
         };
 
         windows_nav {
-            label = "nav";
+            label = "win_nav";
             bindings = <
 &trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
@@ -159,7 +159,7 @@
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans        &trans
             >;
 
-            label = "nav_rhs";
+            label = "win_rnav";
         };
 
         numpad {
@@ -177,7 +177,7 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &kp F18           &trans        &trans              &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &kp LS(F18)       &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans            &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans            &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOLUME_UP    &kp C_MUTE        &trans        &trans              &trans  &trans  &trans
