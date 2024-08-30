@@ -177,7 +177,7 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &kp LS(F18)       &trans        &trans              &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans            &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans            &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans            &trans        &trans              &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOLUME_UP    &kp C_MUTE        &trans        &trans              &trans  &trans  &trans
