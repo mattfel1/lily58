@@ -37,6 +37,13 @@
 
             label = "DEBUG";
         };
+
+        to_phone: to_phone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 10 &bt BT_SEL 2>;
+            label = "TO_PHONE";
+        };
     };
 
     combos {
@@ -165,11 +172,11 @@
         numpad {
             display-name = "num";
             bindings = <
-&to_mac  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&to_win  &kp F15  &kp F16  &kp F17  &kp F18  &kp F19                    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
-&trans   &kp F20  &kp F21  &kp F22  &kp F23  &kp F24                    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
-&trans   &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &f14_or_sleep
-                           &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_0  &trans
+&to_mac    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
+&to_win    &kp F15  &kp F16  &kp F17  &kp F18  &kp F19                    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
+&to_phone  &kp F20  &kp F21  &kp F22  &kp F23  &kp F24                    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
+&trans     &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &f14_or_sleep
+                             &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_0  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -185,6 +192,18 @@
             >;
 
             label = "media";
+        };
+
+        phone {
+            bindings = <
+&kp ESC    &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                           &kp N6    &kp N7     &kp N8     &kp N9   &kp N0    &kp DEL
+&kp TAB    &lt 5 Q  &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
+&kp SQT    &lt 6 A  &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &kp O     &kp MINUS
+&kp LSHFT  &lt 8 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                            &kp LCTRL  &kp LALT  &kp SPACE  &kp RET     &kp LGUI  &kp BSPC  &kp EQUAL  &kp GRAVE
+            >;
+
+            label = "phone";
         };
     };
 };
