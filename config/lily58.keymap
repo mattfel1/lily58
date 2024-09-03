@@ -34,7 +34,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(S) &kp LS(A) &kp LS(L) &kp LS(U) &kp UNDER &kp LS(G) &kp LS(K) &kp LS(B) &kp LS(I) &kp LS(T) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
+                <&none &kp LS(S) &kp LS(A) &kp LS(L) &kp LS(U) &kp UNDER &kp LS(G) &kp LS(K) &kp LS(B) &kp LS(I) &kp LS(T) &kp LPAR &kp RPAR &kp P &kp LEFT &kp LEFT>;
 
             label = "DEBUG";
         };
