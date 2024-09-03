@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp d &kp f &kp g &kp p &kp p &kp c &kp k &kp s &kp s &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp d &kp f &kp g &kp p kp p &kp k &kp j &kp g &kp u &kp p &kp LC(LEFT)>;
+                <&none &kp d &kp f &kp g &kp p &kp p &kp c &kp k &kp s &kp s &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp d &kp f &kp g &kp p kp p &kp k &kp j &kp g &kp u &kp p &kp LC(LEFT)> &kp LC(LEFT)> &kp LC(LEFT)> &kp LEFT>;
 
             label = "CERR";
         };
