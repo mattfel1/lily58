@@ -51,6 +51,7 @@
         compatible = "zmk,combos";
 
         combo_capslock {
+            timeout-ms = <100>;
             bindings = <&kp CAPSLOCK>;
             key-positions = <36 49>;
         };
