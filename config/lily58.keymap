@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp D>;
+                <&none &kp D &kp F &kp G &kp LS(P)>;
 
             label = "CERR";
         };
