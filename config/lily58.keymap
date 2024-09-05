@@ -47,15 +47,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_capslock {
-            timeout-ms = <100>;
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <36 49>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         f14_or_sleep: f14_or_sleep {
@@ -112,11 +104,11 @@
 
         mac_nav_rhs {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
-                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans         &trans
+&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
+                              &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
             label = "m_rnav";
@@ -138,7 +130,7 @@
             bindings = <
 &kp ESC    &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0    &kp DEL
 &kp TAB    &lt 6 Q  &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
-&kp GRAVE  &lt 7 A  &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &kp O     &kp SQT
+&kp GRAVE  &lt 7 A  &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 8 O   &kp SQT
 &kp LSHFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                             &kp LCTRL  &kp LALT  &kp SPACE  &kp RET     &kp LGUI  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
@@ -173,11 +165,11 @@
 
         windows_nav_rhs {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
-                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
+                              &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans        &trans
             >;
 
             label = "w_rnav";
