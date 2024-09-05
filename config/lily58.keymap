@@ -116,7 +116,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
-                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans         &trans
+                        &mkp LCLK  &mkp RCLK &trans &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
             label = "m_rnav";
@@ -177,7 +177,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
-                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans        &trans
+                        &mkp LCLK  &mkp RCLK &trans &trans   &trans  &kp RIGHT_SHIFT  &trans        &trans
             >;
 
             label = "w_rnav";
