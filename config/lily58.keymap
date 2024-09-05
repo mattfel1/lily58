@@ -64,7 +64,7 @@
             #binding-cells = <0>;
             bindings = <&kp RSHIFT>, <&caps_long_press>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
         };
     };
 
