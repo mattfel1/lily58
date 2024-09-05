@@ -45,9 +45,28 @@
             bindings = <&to 5 &bt BT_SEL 2>;
             label = "TO_PHONE";
         };
+
+        caps_long_press: caps_long_press {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <200>;
+            bindings = <&kp CAPS>;
+            label = "CAPS_LONG_PRESS";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
+
+    behaviors {
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp RSHIFT>, <&caps_long_press>;
+
+            tapping-term-ms = <100>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -58,7 +77,7 @@
 &kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
 &kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
 &kp GRAVE   &lt 2 A  &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &mt RSHIFT CAPS
+&kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
                              &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
