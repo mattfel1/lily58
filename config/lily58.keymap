@@ -50,13 +50,13 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        f14_or_sleep: f14_or_sleep {
+        shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "F14_OR_SLEEP";
+            label = "SHIFT_CAPS";
             #binding-cells = <0>;
-            bindings = <&kp F14>, <&kp K_SLEEP>;
+            bindings = <&kp RSHIFT>, <&kp CAPSLOCK>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
     };
 
@@ -69,7 +69,7 @@
 &kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
 &kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
 &kp GRAVE   &lt 2 A  &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
+&kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
                              &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
@@ -104,11 +104,11 @@
 
         mac_nav_rhs {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
-                              &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
+                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
             label = "m_rnav";
@@ -128,11 +128,11 @@
 
         phone {
             bindings = <
-&kp ESC    &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0    &kp DEL
-&kp TAB    &lt 6 Q  &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
-&kp GRAVE  &lt 7 A  &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 8 O   &kp SQT
-&kp LSHFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LCTRL  &kp LALT  &kp SPACE  &kp RET     &kp LGUI  &kp BSPC  &kp MINUS  &kp EQUAL
+&trans     &kp N1   &kp N2  &kp N3  &kp N4  &lt 10 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0    &trans
+&trans     &lt 6 Q  &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
+&kp GRAVE  &lt 7 A  &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 8 O   &kp SQT
+&trans     &lt 9 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                            &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
             >;
 
             label = "phone";
@@ -165,11 +165,11 @@
 
         windows_nav_rhs {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
-                              &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
+                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &kp RIGHT_SHIFT  &trans        &trans
             >;
 
             label = "w_rnav";
@@ -181,7 +181,7 @@
 &to_mac    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
 &to_win    &kp F15  &kp F16  &kp F17  &kp F18  &kp F19                    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
 &to_phone  &kp F20  &kp F21  &kp F22  &kp F23  &kp F24                    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
-&trans     &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &f14_or_sleep
+&trans     &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &kp F14
                              &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_0  &trans
             >;
 
