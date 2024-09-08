@@ -75,7 +75,7 @@
             display-name = "mac";
             bindings = <
 &kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
+&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 11 P         &kp BACKSLASH
 &kp GRAVE   &lt 2 A  &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
 &kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
                              &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
@@ -112,11 +112,11 @@
 
         mac_nav_rhs {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans         &trans         &trans     &trans  &trans
-                        &mkp LCLK  &mkp RCLK &trans &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans         &trans         &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
             label = "m_rnav";
@@ -124,10 +124,10 @@
 
         windows {
             bindings = <
-&trans  &trans   &trans  &trans  &trans        &lt 10 N5                          &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 6 Q  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 7 A  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &lt 8 SEMICOLON  &trans
-&trans  &lt 9 Z  &trans  &trans  &trans        &trans     &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans   &trans  &trans  &trans        &lt 10 N5                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lt 6 Q  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lt 7 A  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans        &trans     &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
                          &trans  &kp LEFT_ALT  &trans     &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
@@ -173,11 +173,11 @@
 
         windows_nav_rhs {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans           &trans        &trans        &trans     &trans  &trans
-                        &mkp LCLK  &mkp RCLK &trans &trans   &trans  &kp RIGHT_SHIFT  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans        &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans        &trans        &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans        &trans
             >;
 
             label = "w_rnav";
@@ -207,6 +207,18 @@
             >;
 
             label = "media";
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans  &trans
+            >;
+
+            label = "mouse";
         };
     };
 };
