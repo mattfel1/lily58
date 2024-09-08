@@ -126,7 +126,7 @@
             bindings = <
 &trans  &trans   &trans  &trans  &trans        &lt 10 N5                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lt 6 Q  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lt 7 A  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lt 7 A  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &lt 8 SEMICOLON  &trans
 &trans  &trans   &trans  &trans  &trans        &trans     &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
                          &trans  &kp LEFT_ALT  &trans     &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
@@ -214,7 +214,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &mmv SCRL_RIGHT     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &msc SCRL_DOWN  &msc SCRL_UP  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans  &trans
             >;
 
