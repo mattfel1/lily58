@@ -100,11 +100,11 @@
 
         mac_nav {
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
             >;
 
             label = "mac_nav";
@@ -163,11 +163,11 @@
         windows_nav {
             label = "win_nav";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans         &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
             >;
         };
 
@@ -222,4 +222,3 @@
         };
     };
 };
-
