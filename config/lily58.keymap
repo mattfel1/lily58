@@ -101,9 +101,9 @@
         mac_nav {
             bindings = <
 &trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &kp W      &kp E         &kp R         &trans                              &trans  &trans     &kp I      &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp H   &kp J      &kp K      &kp L   &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp N   &trans     &trans     &trans  &trans  &trans
                            &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
             >;
 
@@ -113,9 +113,9 @@
         mac_nav_rhs {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &kp W   &kp E   &kp R   &trans                    &trans           &trans         &kp I          &trans     &trans  &trans
+&trans  &trans  &kp S   &kp D   &kp F   &trans                    &kp H            &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N            &trans         &trans         &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
