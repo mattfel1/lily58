@@ -115,7 +115,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
 &trans  &trans  &kp W   &kp E   &kp R   &trans                    &trans           &trans         &kp I          &trans     &trans  &trans
 &trans  &trans  &kp S   &kp D   &kp F   &trans                    &kp H            &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N            &trans         &trans         &trans     &trans  &trans
+&trans  &kp Z   &trans  &trans  &trans  &trans  &trans    &trans  &kp N            &trans         &trans         &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
