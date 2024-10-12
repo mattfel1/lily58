@@ -15,7 +15,7 @@
         to_win: to_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 6 &bt BT_SEL 1>;
+            bindings = <&to 5 &bt BT_SEL 1>;
             label = "TO_WIN";
         };
 
