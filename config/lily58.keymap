@@ -81,11 +81,11 @@
         coleMAC {
             label = "coleMAC";
             bindings = <
-&trans     &kp N1    &kp N2  &kp N3  &kp N4  &lt 11 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0            &trans
-&trans     &lt 2 Q   &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 3 A   &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 4 O           &kp SQT
-&trans     &lt 10 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &trans
-                             &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
+&kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB         &lt 2 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE       &lt 3 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 4 O           &kp SQT
+&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH          &shift_caps
+                                  &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
 
@@ -142,11 +142,11 @@
 
         colemak {
             bindings = <
-&trans     &kp N1    &kp N2  &kp N3  &kp N4  &lt 11 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0            &trans
-&trans     &lt 7 Q   &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 8 A   &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
-&trans     &lt 10 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &trans
-                             &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
+&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &lt 11 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB    &lt 7 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 8 A   &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
+&kp LSHFT  &lt 10 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH          &shift_caps
+                             &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
 
             label = "colemak";
