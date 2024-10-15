@@ -8,14 +8,14 @@
         to_mac: to_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &bt BT_SEL 0>;
+            bindings = <&to 1 &bt BT_SEL 0>;
             label = "TO_MAC";
         };
 
         to_win: to_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 1>;
+            bindings = <&to 6 &bt BT_SEL 1>;
             label = "TO_WIN";
         };
 
@@ -39,11 +39,11 @@
             label = "DEBUG";
         };
 
-        to_phone: to_phone {
+        to_colemak: to_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 4 &bt BT_SEL 2>;
-            label = "TO_PHONE";
+            bindings = <&to 5 &bt BT_SEL 2>;
+            label = "TO_COLEMAK";
         };
 
         caps_long_press: caps_long_press {
@@ -52,6 +52,13 @@
             tap-ms = <200>;
             bindings = <&kp CAPS>;
             label = "CAPS_LONG_PRESS";
+        };
+
+        to_coleMAC: to_coleMAC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 3>;
+            label = "TO_COLEMAC";
         };
     };
 
@@ -71,14 +78,25 @@
     keymap {
         compatible = "zmk,keymap";
 
+        coleMAC {
+            label = "coleMAC";
+            bindings = <
+&trans     &kp N1    &kp N2  &kp N3  &kp N4  &lt 11 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0            &trans
+&trans     &lt 2 Q   &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 3 A   &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 4 O           &kp SQT
+&trans     &lt 10 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &trans
+                             &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
+            >;
+        };
+
         default_layer {
             display-name = "mac";
             bindings = <
-&kp ESC     &kp N1   &kp N2  &kp N3     &kp N4    &lt 10 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &lt 1 Q  &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 11 P         &kp BACKSLASH
-&kp GRAVE   &lt 2 A  &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LSHIFT  &lt 9 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
-                             &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
+&kp ESC     &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
+&kp TAB     &lt 2 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BACKSLASH
+&kp GRAVE   &lt 3 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 4 SEMICOLON  &kp SQT
+&kp LSHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
+                              &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -122,25 +140,25 @@
             label = "m_rnav";
         };
 
-        phone {
+        colemak {
             bindings = <
-&trans     &kp N1   &kp N2  &kp N3  &kp N4  &lt 10 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0    &trans
-&trans     &lt 7 Q  &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
-&kp GRAVE  &lt 7 A  &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 8 O   &kp SQT
-&trans     &lt 9 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                            &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
+&trans     &kp N1    &kp N2  &kp N3  &kp N4  &lt 11 N5                        &kp N6  &kp N7     &kp N8     &kp N9   &kp N0            &trans
+&trans     &lt 7 Q   &kp W   &kp F   &kp P   &kp G                            &kp J   &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 8 A   &kp R   &kp S   &kp T   &kp D                            &kp H   &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
+&trans     &lt 10 Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT    &kp RBKT  &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &trans
+                             &trans  &trans  &trans     &trans      &trans    &trans  &kp MINUS  &kp EQUAL
             >;
 
-            label = "phone";
+            label = "colemak";
         };
 
         windows {
             bindings = <
-&trans  &trans   &trans  &trans  &trans        &lt 10 N5                          &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 7 Q  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &trans           &trans
-&trans  &lt 7 A  &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &lt 8 SEMICOLON  &trans
-&trans  &trans   &trans  &trans  &trans        &trans     &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
-                         &trans  &kp LEFT_ALT  &trans     &trans    &kp LEFT_WIN  &trans  &trans  &trans
+&trans  &trans    &trans  &trans  &trans        &lt 11 N5                          &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 7 Q   &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &lt 12 P         &trans
+&trans  &lt 8 A   &trans  &trans  &trans        &trans                             &trans  &trans  &trans  &trans  &lt 9 SEMICOLON  &trans
+&trans  &lt 10 Z  &trans  &trans  &trans        &trans     &trans    &trans        &trans  &trans  &trans  &trans  &trans           &trans
+                          &trans  &kp LEFT_ALT  &trans     &trans    &kp LEFT_WIN  &trans  &trans  &trans
             >;
 
             label = "windows";
@@ -186,11 +204,11 @@
         numpad {
             display-name = "num";
             bindings = <
-&to_mac    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&to_win    &kp F15  &kp F16  &kp F17  &kp F18  &kp F19                    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
-&to_phone  &kp F20  &kp F21  &kp F22  &kp F23  &kp F24                    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
-&trans     &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &kp F14
-                             &trans   &trans   &trans   &trans    &trans  &trans  &kp NUMBER_0  &trans
+&to_mac  &kp F1   &kp F2   &kp F3   &kp F4       &kp F5                         &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
+&to_win  &kp F15  &kp F16  &kp F17  &kp F18      &kp F19                        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans   &kp F12
+&trans   &kp F20  &kp F21  &kp F22  &kp F23      &kp F24                        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &kp F13
+&trans   &trans   &trans   &trans   &to_colemak  &to_coleMAC  &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &kp F14
+                           &trans   &trans       &trans       &trans    &trans  &trans  &kp NUMBER_0  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
