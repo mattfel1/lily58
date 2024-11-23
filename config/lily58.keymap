@@ -66,7 +66,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp E &kp N &kp D &kp L &kp &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
+                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(COLON) &kp LS(COLON) &kp E &kp N &kp D &kp L &kp COLON &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
 
             label = "CERR";
         };
@@ -76,7 +76,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp &kp LEFT &kp LEFT>;
+                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp COLON &kp LEFT &kp LEFT>;
 
             label = "DEBUG";
         };
