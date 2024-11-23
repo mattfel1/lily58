@@ -5,18 +5,32 @@
 
 / {
     macros {
-        to_mac_qwerty: to_mac {
+        to_mac_qwerty: to_mac_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 1 &bt BT_SEL 0>;
             label = "TO_MAC";
         };
 
-        to_win_qwerty: to_win {
+        to_win_qwerty: to_win_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 2 &bt BT_SEL 1>;
             label = "TO_WIN";
+        };
+
+        to_mac_colemak: to_mac_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 3>;
+            label = "TO_COLEMAC";
+        };
+
+        to_win_colemak: to_win_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 2 &bt BT_SEL 2>;
+            label = "TO_COLEMAK";
         };
 
         cerr_qwerty_keystroke: cerr {
@@ -39,13 +53,6 @@
             label = "DEBUG";
         };
 
-        to_win_colemak: to_colemak {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2 &bt BT_SEL 2>;
-            label = "TO_COLEMAK";
-        };
-
         caps_long_press: caps_long_press {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -54,39 +61,32 @@
             label = "CAPS_LONG_PRESS";
         };
 
-        to_mac_colemak: to_coleMAC {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &bt BT_SEL 3>;
-            label = "TO_COLEMAC";
-        };
-
-        cerr: cerr {
+        cerr_keystroke: cerr_keystroke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp F &kp G &kp LS(P) &kp LS(P) &kp C &kp K &kp S &kp S &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp D &kp F &kp G &kp LS(P) &kp LS(P) &kp K &kp J &kp G &kp U &kp P &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
+                <&none &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp E &kp N &kp D &kp L &kp ; &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
 
             label = "CERR";
         };
 
-        debug: debug {
+        debug_keystroke: debug_keystroke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(S) &kp LS(A) &kp LS(L) &kp LS(U) &kp UNDER &kp LS(G) &kp LS(K) &kp LS(B) &kp LS(I) &kp LS(T) &kp LPAR &kp RPAR &kp P &kp LEFT &kp LEFT>;
+                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp ; &kp LEFT &kp LEFT>;
 
             label = "DEBUG";
         };
 
-        iostream: iostream {
+        iostream_keystroke: iostream_keystroke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(S) &kp LS(A) &kp LS(L) &kp LS(U) &kp UNDER &kp LS(G) &kp LS(K) &kp LS(B) &kp LS(I) &kp LS(T) &kp LPAR &kp RPAR &kp P &kp LEFT &kp LEFT>;
+                <&none &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE &kp LT &kp I &kp O &kp S &kp T &kp R &kp E &kp A &kp M &kp GT>;
 
             label = "IOSTREAM";
         };
@@ -159,7 +159,7 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_qwerty_keystroke  &debug_qwerty_keystroke  &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke          &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans                  &trans                   &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP             &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN           &trans                   &trans          &trans           &trans  &trans
@@ -197,7 +197,7 @@
             label = "arrow";
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_qwerty_keystroke  &debug_qwerty_keystroke  &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke          &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans                  &trans                   &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP             &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN           &trans                   &trans          &trans           &trans  &trans
