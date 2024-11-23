@@ -66,7 +66,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp E &kp N &kp D &kp L &kp ; &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
+                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(;) &kp LS(;) &kp E &kp N &kp D &kp L &kp &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
 
             label = "CERR";
         };
@@ -76,7 +76,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp ; &kp LEFT &kp LEFT>;
+                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp &kp LEFT &kp LEFT>;
 
             label = "DEBUG";
         };
@@ -159,11 +159,11 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke          &trans           &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans                  &trans                   &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP             &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN           &trans                   &trans          &trans           &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans                  &trans                   &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP      &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN    &trans            &trans               &trans           &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
             >;
 
             label = "m_arrow";
@@ -197,11 +197,11 @@
             label = "arrow";
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke          &trans           &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans                  &trans                   &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP             &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN           &trans                   &trans          &trans           &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans                  &trans                   &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP      &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN    &trans            &trans               &trans           &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
