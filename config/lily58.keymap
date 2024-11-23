@@ -15,7 +15,7 @@
         to_win_qwerty: to_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 6 &bt BT_SEL 1>;
+            bindings = <&to 2 &bt BT_SEL 1>;
             label = "TO_WIN";
         };
 
@@ -42,7 +42,7 @@
         to_win_colemak: to_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 2>;
+            bindings = <&to 2 &bt BT_SEL 2>;
             label = "TO_COLEMAK";
         };
 
@@ -112,24 +112,48 @@
             label = "coleMAC";
             bindings = <
 &kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &lt 2 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
-&kp GRAVE       &lt 3 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 4 O           &kp SQT
-&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH          &shift_caps
+&kp TAB         &lt 4 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE       &lt 5 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 6 O           &kp SQT
+&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH      &shift_caps
                                   &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
 
-        mac {
-            display-name = "mac";
+        mac_qwerty {
+            display-name = "qwerty_mac";
             bindings = <
 &kp ESC     &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &lt 2 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BACKSLASH
-&kp GRAVE   &lt 3 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 4 SEMICOLON  &kp SQT
-&kp LSHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
+&kp TAB     &lt 4 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BACKSLASH
+&kp GRAVE   &lt 5 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 6 SEMICOLON  &kp SQT
+&kp LSHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH     &shift_caps
                               &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
-            label = "mac";
+            label = "mac_qwerty";
+        };
+
+        win_colemak {
+            bindings = <
+&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &lt 11 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB    &lt 7 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 8 A   &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
+&kp LSHFT  &lt 10 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH      &shift_caps
+                             &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
+            >;
+
+            label = "win_colemak";
+        };
+
+        win_qwerty {
+            bindings = <
+&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 11 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DEL
+&kp TAB         &lt 7 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BSLH
+&kp GRAVE       &lt 8 A   &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &lt 9 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH     &shift_caps
+                                  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
+            >;
+
+            label = "win_qwerty";
         };
 
         mac_arrows {
@@ -167,30 +191,6 @@
             >;
 
             label = "m_rnav";
-        };
-
-        colemak {
-            bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &lt 11 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB    &lt 7 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 8 A   &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
-&kp LSHFT  &lt 10 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH          &shift_caps
-                             &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
-            >;
-
-            label = "colemak";
-        };
-
-        windows {
-            bindings = <
-&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 11 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DEL
-&kp TAB         &lt 7 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BSLH
-&kp GRAVE       &lt 8 A   &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &lt 9 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH         &shift_caps
-                                  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
-            >;
-
-            label = "windows";
         };
 
         windows_arrows {
