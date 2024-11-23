@@ -15,7 +15,7 @@
         to_win_qwerty: to_win_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &bt BT_SEL 1>;
+            bindings = <&to 3 &bt BT_SEL 1>;
             label = "TO_WIN";
         };
 
@@ -272,10 +272,10 @@
         switch_layer {
             display-name = "lyr_swp";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &bt BT_CLR      &trans          &trans  &trans  &trans  &to_mac_colemak
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans          &trans          &trans  &trans  &trans  &to_win_colemak
+&trans  &trans  &trans  &trans  &trans  &trans                        &bt BT_CLR      &trans          &trans  &trans  &trans  &to_mac_qwerty
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans          &trans          &trans  &trans  &trans  &to_win_qwerty
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans          &trans          &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &to_mac_qwerty  &to_win_qwerty  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &to_mac_colemak  &to_win_colemak  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &bt BT_NXT    &trans  &trans          &trans          &trans
             >;
         };
