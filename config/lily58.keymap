@@ -33,26 +33,6 @@
             label = "TO_COLEMAK";
         };
 
-        cerr_qwerty_keystroke: cerr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 1>,
-                <&none &kp D &kp F &kp G &kp LS(P) &kp LS(P) &kp C &kp K &kp S &kp S &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp D &kp F &kp G &kp LS(P) &kp LS(P) &kp K &kp J &kp G &kp U &kp P &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
-
-            label = "CERR";
-        };
-
-        debug_qwerty_keystroke: debug {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 1>,
-                <&none &kp LS(S) &kp LS(A) &kp LS(L) &kp LS(U) &kp UNDER &kp LS(G) &kp LS(K) &kp LS(B) &kp LS(I) &kp LS(T) &kp LPAR &kp RPAR &kp P &kp LEFT &kp LEFT>;
-
-            label = "DEBUG";
-        };
-
         caps_long_press: caps_long_press {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -66,7 +46,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(COLON) &kp LS(COLON) &kp E &kp N &kp D &kp L &kp COLON &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
+                <&none &kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp E &kp R &kp R &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp S &kp T &kp D &kp LS(COLON) &kp LS(COLON) &kp E &kp N &kp D &kp L &kp SEMI &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
 
             label = "CERR";
         };
@@ -76,7 +56,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp COLON &kp LEFT &kp LEFT>;
+                <&none &kp LS(R) &kp LS(A) &kp LS(I) &kp LS(L) &kp UNDER &kp LS(D) &kp LS(E) &kp LS(B) &kp LS(U) &kp LS(G) &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
 
             label = "DEBUG";
         };
