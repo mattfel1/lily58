@@ -163,8 +163,8 @@
             bindings = <
 &trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP      &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN    &trans            &trans               &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans  &trans
                            &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
             >;
 
@@ -173,11 +173,11 @@
 
         mac_nav {
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp W      &kp E         &kp R         &trans                              &trans  &trans     &kp I      &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp H   &kp J      &kp K      &kp L   &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp N   &trans     &trans     &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp PG_UP  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN  &trans  &trans  &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans  &trans
             >;
 
             label = "mac_nav";
@@ -186,9 +186,9 @@
         mac_nav_rhs {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &kp W   &kp E   &kp R   &trans                    &trans           &trans         &kp I          &trans     &trans  &trans
-&trans  &trans  &kp S   &kp D   &kp F   &trans                    &kp H            &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &kp Z   &trans  &trans  &trans  &trans  &trans    &trans  &kp N            &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans         &trans         &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
             >;
 
@@ -201,8 +201,8 @@
             bindings = <
 &trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &kp PAGE_UP      &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PAGE_DOWN    &trans            &trans               &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans  &trans
                            &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
             >;
 
@@ -272,11 +272,11 @@
         switch_layer {
             display-name = "lyr_swp";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &bt BT_CLR      &trans          &trans  &trans  &trans  &to_mac_qwerty
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans          &trans          &trans  &trans  &trans  &to_win_qwerty
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans          &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &bt BT_CLR       &trans           &trans  &trans  &trans  &to_mac_qwerty
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans           &trans           &trans  &trans  &trans  &to_win_qwerty
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans           &trans           &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &to_mac_colemak  &to_win_colemak  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &bt BT_NXT    &trans  &trans          &trans          &trans
+                        &trans  &trans  &trans  &bt BT_NXT    &trans  &trans           &trans           &trans
             >;
         };
     };
