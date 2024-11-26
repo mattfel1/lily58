@@ -91,10 +91,10 @@
         m_clmk {
             label = "m_clmk";
             bindings = <
-&kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &mt 11 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &mt 4 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &mt 12 SEMICOLON  &kp BSLH
-&kp GRAVE       &mt 5 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &mt 6 O           &kp SQT
-&kp LEFT_SHIFT  &mt 10 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &mt 13 SLASH      &shift_caps
+&kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB         &lt 4 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE       &lt 5 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 6 O           &kp SQT
+&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH      &shift_caps
                                   &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
@@ -102,10 +102,10 @@
         m_qwrty {
             display-name = "m_qwrty";
             bindings = <
-&kp ESC     &kp N1    &kp N2  &kp N3     &kp N4    &mt 11 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &mt 4 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &mt 12 P         &kp BACKSLASH
-&kp GRAVE   &mt 5 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &mt 6 SEMICOLON  &kp SQT
-&kp LSHIFT  &mt 10 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &mt 13 SLASH     &shift_caps
+&kp ESC     &kp N1    &kp N2  &kp N3     &kp N4    &lt 11 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
+&kp TAB     &lt 4 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BACKSLASH
+&kp GRAVE   &lt 5 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 6 SEMICOLON  &kp SQT
+&kp LSHIFT  &lt 10 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH     &shift_caps
                               &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
@@ -115,10 +115,10 @@
         w_clmk {
             display-name = "w_clmk";
             bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &mt 11 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB    &mt 7 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &mt 12 SEMICOLON  &kp BSLH
-&kp GRAVE  &mt 8 A   &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &mt 9 O           &kp SQT
-&kp LSHFT  &mt 10 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &mt 13 SLASH      &shift_caps
+&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &lt 11 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB    &lt 7 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 12 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 8 A   &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 9 O           &kp SQT
+&kp LSHFT  &lt 10 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH      &shift_caps
                              &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
 
@@ -128,10 +128,10 @@
         w_qwrty {
             display-name = "w_qwrty";
             bindings = <
-&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &mt 11 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DEL
-&kp TAB         &mt 7 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &mt 12 P         &kp BSLH
-&kp GRAVE       &mt 8 A   &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &mt 9 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &mt 10 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &mt 13 SLASH     &shift_caps
+&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 11 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DEL
+&kp TAB         &lt 7 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 12 P         &kp BSLH
+&kp GRAVE       &lt 8 A   &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &lt 9 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 10 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 13 SLASH     &shift_caps
                                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
