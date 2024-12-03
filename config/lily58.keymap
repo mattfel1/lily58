@@ -5,7 +5,7 @@
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <225>;
     quick-tap-ms = <165>;
 };
 
