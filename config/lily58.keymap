@@ -5,7 +5,7 @@
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <225>;
+    tapping-term-ms = <210>;
     quick-tap-ms = <165>;
 };
 
@@ -75,6 +75,13 @@
                 <&none &kp POUND &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE &kp LT &kp I &kp O &kp S &kp T &kp R &kp E &kp A &kp M &kp GT>;
 
             label = "IOSTREAM";
+        };
+
+        test_cmd: test_cmd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U &kp SPACE &kp D &kp A &kp G>;
+            label = "TEST_CMD";
         };
     };
 
@@ -147,7 +154,7 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &test_cmd        &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans  &trans
