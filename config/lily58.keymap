@@ -80,7 +80,9 @@
         test_cmd: test_cmd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U &kp SPACE &kp D &kp A &kp G>;
+            bindings = 
+                <&macro_tap_time 1>,
+                <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U &kp SPACE &kp D &kp A &kp G>;
             label = "TEST_CMD";
         };
     };
