@@ -28,6 +28,13 @@
             label = "TO_WIN";
         };
 
+        to_T_qwerty: to_T_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 5 &bt BT_SEL 2>;
+            label = "TO_T_QWERTY";
+        };
+
         to_mac_colemak: to_mac_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -40,6 +47,13 @@
             #binding-cells = <0>;
             bindings = <&to 2 &bt BT_SEL 1>;
             label = "TO_COLEMAK";
+        };
+
+        to_T_colemak: to_T_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &bt BT_SEL 2>;
+            label = "TO_T_COLEMAK";
         };
 
         caps_long_press: caps_long_press {
@@ -102,20 +116,6 @@
             #binding-cells = <0>;
             bindings = <&kp F19>;
             label = "TEAMVIEWER_WIN";
-        };
-
-        to_T_qwerty: to_T_qwerty {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 2>;
-            label = "TO_T_QWERTY";
-        };
-
-        to_T_colemak: to_T_colemak {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 4 &bt BT_SEL 2>;
-            label = "TO_T_COLEMAK";
         };
     };
 
