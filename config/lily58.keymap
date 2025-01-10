@@ -185,9 +185,9 @@
             label = "win_qwerty";
         };
 
-        T_CLMK {
+        t_clmk {
             label = "teamviewer_colemak";
-            display-name = "w_clmk";
+            display-name = "t_clmk";
             bindings = <
 &kp ESC    &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
 &kp TAB    &lt 16 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
@@ -197,9 +197,9 @@
             >;
         };
 
-        T_QWRTY {
+        t_qwrty {
             label = "teamviewer_qwerty";
-            display-name = "w_qwrty";
+            display-name = "t_qwrty";
             bindings = <
 &kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 13 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
 &kp TAB         &lt 16 Q  &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
