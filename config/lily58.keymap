@@ -116,15 +116,6 @@
 
             tapping-term-ms = <200>;
         };
-
-        win_menu: win_menu {
-            compatible = "zmk,behavior-tap-dance";
-            label = "WIN_MENU";
-            #binding-cells = <0>;
-            bindings = <&win_TV>, <&menu_TV>;
-
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
