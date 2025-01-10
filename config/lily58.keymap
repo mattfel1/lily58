@@ -103,27 +103,6 @@
 
             label = "TEST_CMD";
         };
-
-        alt_TV: alt_TV {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F18>;
-            label = "ALT_TV";
-        };
-
-        win_TV: teamviewer_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F19>;
-            label = "TEAMVIEWER_WIN";
-        };
-
-        menu_TV: menu_TV {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F17>;
-            label = "MENU_TV";
-        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -205,11 +184,11 @@
             label = "teamviewer_colemak";
             display-name = "t_clmk";
             bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                         &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB    &lt 16 Q  &kp W   &kp F      &kp P    &kp G                             &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 17 A  &kp R   &kp S      &kp T    &kp D                             &kp H     &kp N      &kp E      &kp I    &lt 18 O          &kp SQT
-&kp LSHFT  &lt 12 Z  &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT   &kp K     &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
-                             &kp LCTRL  &alt_TV  &kp SPACE  &kp RET     &win_menu  &kp BSPC  &kp MINUS  &kp EQUAL
+&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB    &lt 16 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
+&kp GRAVE  &lt 17 A  &kp R   &kp S      &kp T    &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 18 O          &kp SQT
+&kp LSHFT  &lt 12 Z  &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
+                             &kp LCTRL  &kp F19  &kp SPACE  &kp RET     &kp F18   &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
 
@@ -217,11 +196,11 @@
             label = "teamviewer_qwerty";
             display-name = "t_qwrty";
             bindings = <
-&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4   &lt 13 N5                          &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &lt 16 Q  &kp W   &kp E             &kp R    &kp T                              &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
-&kp GRAVE       &lt 17 A  &kp S   &kp D             &kp F    &kp G                              &kp H          &kp J      &kp K      &kp L    &lt 18 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT   &kp N          &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
-                                  &kp LEFT_CONTROL  &alt_TV  &kp SPACE  &kp ENTER    &win_menu  &kp BACKSPACE  &kp MINUS  &kp EQUAL
+&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4   &lt 13 N5                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB         &lt 16 Q  &kp W   &kp E             &kp R    &kp T                             &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
+&kp GRAVE       &lt 17 A  &kp S   &kp D             &kp F    &kp G                             &kp H          &kp J      &kp K      &kp L    &lt 18 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
+                                  &kp LEFT_CONTROL  &kp F19  &kp SPACE  &kp ENTER    &kp F18   &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
         };
 
@@ -352,7 +331,7 @@
             display-name = "arrow";
             bindings = <
 &trans  &trans  &trans     &trans   &trans   &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &trans           &trans  &trans
-&trans  &trans  &kp LCTRL  &win_TV  &alt_TV  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp F18  &kp F19  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans  &trans
 &trans  &trans  &trans     &trans   &trans   &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans   &trans   &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans  &trans
                            &trans   &trans   &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
@@ -366,7 +345,7 @@
             bindings = <
 &trans  &trans  &trans     &trans   &trans   &trans                              &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans     &trans   &trans   &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &win_TV  &alt_TV  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp F18  &kp F19  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans     &trans   &trans   &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
                            &trans   &trans   &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
             >;
@@ -377,7 +356,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans   &trans   &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans   &trans   &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &alt_TV  &win_TV  &kp RCTRL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp F19  &kp F18  &kp RCTRL  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans   &trans   &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans   &trans
             >;
