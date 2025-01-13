@@ -89,7 +89,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp POUND &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE &kp LT &kp I &kp O &kp S &kp T &kp R &kp E &kp A &kp M &kp GT>;
+                <&none &kp POUND &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE &kp LT &kp I &kp O &kp S &kp T &kp R &kp E &kp A &kp M &kp GT &kp RET>;
 
             label = "IOSTREAM";
         };
