@@ -136,28 +136,31 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TO_MAC";
             #binding-cells = <0>;
-            bindings = <&to_mac_colemak>, <&to_mac_qwerty>;
+            bindings = <&to_mac_colemak>, <&to_mac_qwerty>, <&bt BT_DISC 0>;
         };
 
         to_win: to_win {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_WIN";
             #binding-cells = <0>;
-            bindings = <&to_win_colemak>, <&to_win_colemak>;
+            bindings = <&to_win_colemak>, <&to_win_colemak>, <&bt BT_DISC 1>;
         };
 
         to_phone: to_phone {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_PHONE";
             #binding-cells = <0>;
-            bindings = <&to_phone_colemak>, <&to_phone_qwerty>;
+            bindings = <&to_phone_colemak>, <&to_phone_qwerty>, <&bt BT_DISC 2>;
         };
 
         to_tablet: to_tablet {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_TABLET";
             #binding-cells = <0>;
-            bindings = <&to_tablet_colemak>, <&to_tablet_qwerty>;
+            bindings =
+                <&to_tablet_colemak>,
+                <&to_tablet_qwerty>,
+                <&bt BT_DISC 3>;
         };
     };
 
