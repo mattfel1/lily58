@@ -36,6 +36,13 @@
             label = "TO_PHONE_QWERTY";
         };
 
+        to_tablet_qwerty: to_tablet_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 5 &bt BT_SEL 3>;
+            label = "TO_TABLET_QWERTY";
+        };
+
         to_mac_colemak: to_mac_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -55,6 +62,13 @@
             #binding-cells = <0>;
             bindings = <&to 4 &bt BT_SEL 2>;
             label = "TO_T_COLEMAK";
+        };
+
+        to_tablet_colemak: to_tablet_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &bt BT_SEL 3>;
+            label = "TO_TABLET_COLEMAK";
         };
 
         caps_long_press: caps_long_press {
@@ -103,20 +117,6 @@
                 <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U &kp SPACE &kp D &kp A &kp G>;
 
             label = "TEST_CMD";
-        };
-
-        to_tablet_qwerty: to_tablet_qwerty {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 3>;
-            label = "TO_TABLET_QWERTY";
-        };
-
-        to_tablet_colemak: to_tablet_colemak {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 4 &bt BT_SEL 3>;
-            label = "TO_TABLET_COLEMAK";
         };
     };
 
