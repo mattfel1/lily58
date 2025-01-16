@@ -19,14 +19,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 1 &bt BT_SEL 0>;
-            label = "TO_MAC";
+            label = "TO_MAC_QWERTY";
         };
 
         to_win_qwerty: to_win_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 3 &bt BT_SEL 1>;
-            label = "TO_WIN";
+            label = "TO_WIN_QWERTY";
         };
 
         to_phone_qwerty: to_phone_qwerty {
@@ -47,21 +47,21 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &bt BT_SEL 0>;
-            label = "TO_COLEMAC";
+            label = "TO_MAC_COLEMAC";
         };
 
         to_win_colemak: to_win_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 2 &bt BT_SEL 1>;
-            label = "TO_COLEMAK";
+            label = "TO_WIN_COLEMAK";
         };
 
-        to_phone_colemak: to_T_colemak {
+        to_phone_colemak: to_phone_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 4 &bt BT_SEL 2>;
-            label = "TO_T_COLEMAK";
+            label = "TO_PHONE_COLEMAK";
         };
 
         to_tablet_colemak: to_tablet_colemak {
