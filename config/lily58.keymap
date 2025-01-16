@@ -25,49 +25,49 @@
         to_win_qwerty: to_win_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 3 &bt BT_SEL 1>;
+            bindings = <&to 3 &bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "TO_WIN_QWERTY";
         };
 
         to_phone_qwerty: to_phone_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 2>;
+            bindings = <&to 5 &bt BT_SEL 2 &bt BT_DISC 1 &bt BT_DISC 0 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "TO_PHONE_QWERTY";
         };
 
         to_tablet_qwerty: to_tablet_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 5 &bt BT_SEL 3>;
+            bindings = <&to 5 &bt BT_SEL 3 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 0 &bt BT_DISC 4>;
             label = "TO_TABLET_QWERTY";
         };
 
         to_mac_colemak: to_mac_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &bt BT_SEL 0>;
+            bindings = <&to 0 &bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "TO_MAC_COLEMAC";
         };
 
         to_win_colemak: to_win_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &bt BT_SEL 1>;
+            bindings = <&to 2 &bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "TO_WIN_COLEMAK";
         };
 
         to_phone_colemak: to_phone_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 4 &bt BT_SEL 2>;
+            bindings = <&to 4 &bt BT_SEL 2 &bt BT_DISC 1 &bt BT_DISC 0 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "TO_PHONE_COLEMAK";
         };
 
         to_tablet_colemak: to_tablet_colemak {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 4 &bt BT_SEL 3>;
+            bindings = <&to 4 &bt BT_SEL 3 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 0 &bt BT_DISC 4>;
             label = "TO_TABLET_COLEMAK";
         };
 
