@@ -8,9 +8,11 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: petejohanson
+      # remote: petejohanson
+      remote: zmkfirmware
+      revision: main
       # revision: feat/pointers-move-scroll # not intended for merge
-      revision: feat/pointers-with-input-processors
+      # revision: feat/pointers-with-input-processors
       import: app/west.yml
   self:
     path: config
