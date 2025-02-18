@@ -10,7 +10,7 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <165>;
-    require-prior-idle-ms = <90>;
+    require-prior-idle-ms = <85>;
 };
 
 / {
@@ -172,8 +172,8 @@
             bindings = <
 &kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
 &kp TAB         &lt 6 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&kp GRAVE       &lt 7 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 8 O           &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
+&lt 15 GRAVE    &lt 7 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 8 O           &kp SQT
+&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
                                   &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
@@ -181,11 +181,11 @@
         m_qwrty {
             display-name = "m_qwrty";
             bindings = <
-&kp ESC     &kp N1    &kp N2  &kp N3     &kp N4    &lt 13 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
-&kp TAB     &lt 6 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 14 P         &kp BACKSLASH
-&kp GRAVE   &lt 7 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 8 SEMICOLON  &kp SQT
-&kp LSHIFT  &lt 12 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH     &shift_caps
-                              &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
+&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4    &lt 13 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0           &kp DELETE
+&kp TAB       &lt 6 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 14 P         &kp BACKSLASH
+&lt 15 GRAVE  &lt 7 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &lt 8 SEMICOLON  &kp SQT
+&kp LSHIFT    &lt 12 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH     &shift_caps
+                                &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
             label = "mac_qwerty";
@@ -194,11 +194,11 @@
         w_clmk {
             display-name = "w_clmk";
             bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4        &lt 13 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB    &lt 9 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 10 A  &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 11 O          &kp SQT
-&kp LSHFT  &lt 12 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
-                             &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
+&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4        &lt 13 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB       &lt 9 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
+&lt 15 GRAVE  &lt 10 A  &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &lt 11 O          &kp SQT
+&kp LSHFT     &lt 12 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
+                                &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
 
             label = "win_colemak";
@@ -209,8 +209,8 @@
             bindings = <
 &kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 13 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
 &kp TAB         &lt 9 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
-&kp GRAVE       &lt 10 A  &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &lt 11 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
+&lt 15 GRAVE    &lt 10 A  &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &lt 11 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
                                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
@@ -221,11 +221,11 @@
             label = "teamviewer_colemak";
             display-name = "t_clmk";
             bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB    &lt 16 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&kp GRAVE  &lt 17 A  &kp R   &kp S      &kp T    &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 18 O          &kp SQT
-&kp LSHFT  &lt 12 Z  &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
-                             &kp LCTRL  &kp F11  &kp SPACE  &kp RET     &kp F10   &kp BSPC  &kp MINUS  &kp EQUAL
+&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB       &lt 17 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
+&lt 15 GRAVE  &lt 18 A  &kp R   &kp S      &kp T    &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 19 O          &kp SQT
+&kp LSHFT     &lt 12 Z  &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
+                                &kp LCTRL  &kp F11  &kp SPACE  &kp RET     &kp F10   &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
 
@@ -234,9 +234,9 @@
             display-name = "t_qwrty";
             bindings = <
 &kp ESC         &kp N1    &kp N2  &kp N3            &kp N4   &lt 13 N5                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &lt 16 Q  &kp W   &kp E             &kp R    &kp T                             &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
-&kp GRAVE       &lt 17 A  &kp S   &kp D             &kp F    &kp G                             &kp H          &kp J      &kp K      &kp L    &lt 18 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 15 SLASH      &shift_caps
+&kp TAB         &lt 17 Q  &kp W   &kp E             &kp R    &kp T                             &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
+&lt 15 GRAVE    &lt 18 A  &kp S   &kp D             &kp F    &kp G                             &kp H          &kp J      &kp K      &kp L    &lt 19 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
                                   &kp LEFT_CONTROL  &kp F11  &kp SPACE  &kp ENTER    &kp F10   &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
         };
@@ -350,6 +350,18 @@
             >;
 
             label = "mouse";
+        };
+
+        left_mouse {
+            bindings = <
+&trans  &trans          &trans          &trans           &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &mmv MOVE_UP    &trans           &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N6          &kp N7          &kp N8           &kp N9        &kp N0     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &msc SCRL_DOWN   &msc SCRL_UP  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans  &trans
+            >;
+
+            label = "left_mouse";
         };
 
         switch_layer {
