@@ -295,11 +295,11 @@
         windows_nav {
             label = "win_nav";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &kp PG_UP  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN  &trans  &trans  &trans  &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans  &trans
             >;
         };
 
@@ -392,11 +392,11 @@
         T_nav {
             label = "teamviewer_nav";
             bindings = <
-&trans  &trans  &trans     &trans   &trans   &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans   &trans   &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp F10  &kp F11  &trans                              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans     &trans   &trans   &trans          &trans    &kp HOME  &trans  &trans     &trans     &trans  &trans  &trans
-                           &trans   &trans   &kp LEFT_SHIFT  &trans    &kp END   &trans  &kp PG_UP  &kp PG_DN
+&trans  &trans  &trans     &trans   &trans   &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans   &trans   &trans                              &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp F10  &kp F11  &trans                              &kp PG_UP  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans   &trans   &trans          &trans    &kp HOME  &kp PG_DN  &trans  &trans  &trans  &trans  &trans
+                           &trans   &trans   &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans  &trans
             >;
         };
 
