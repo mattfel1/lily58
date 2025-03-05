@@ -120,9 +120,10 @@
         stay_awake: stay_awake {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_RIGHT>;
+            bindings = 
+                <&macro_tap_time 10000>,
+                <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT >;
             label = "STAY_AWAKE";
-            tap-ms = <10000>;
         };
     };
 
