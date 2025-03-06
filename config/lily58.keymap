@@ -128,7 +128,29 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_pgup {
+            bindings = <&kp PG_UP>;
+            key-positions = <30 18>;
+        };
+
+        combo_pgdn {
+            bindings = <&kp PG_DN>;
+            key-positions = <30 44>;
+        };
+
+        combo_home {
+            bindings = <&kp HOME>;
+            key-positions = <30 43>;
+        };
+
+        combo_end {
+            bindings = <&kp END>;
+            key-positions = <44 43>;
+        };
+    };
 
     behaviors {
         shift_caps: shift_caps {
