@@ -136,7 +136,7 @@
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
             key-positions = <34 33>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 1 2 3>;
         };
 
         combo_ralt_mac {
@@ -155,14 +155,6 @@
             layers = <2 3>;
         };
 
-        combo_ralt_tv {
-            bindings = <&kp F11>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <34 31>;
-            layers = <4 5>;
-        };
-
         combo_rsuper_mac {
             bindings = <&kp RIGHT_WIN>;
             timeout-ms = <40>;
@@ -177,14 +169,6 @@
             require-prior-idle-ms = <80>;
             key-positions = <34 32>;
             layers = <2 3>;
-        };
-
-        combo_rsuper_tv {
-            bindings = <&kp F10>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <34 32>;
-            layers = <4 5>;
         };
 
         combo_rctrlalt_mac {
@@ -259,14 +243,6 @@
             layers = <2 3>;
         };
 
-        combo_rshiftalt_tv {
-            bindings = <&kp RS(F11)>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <55 34 31>;
-            layers = <4 5>;
-        };
-
         combo_rshiftsuper_mac {
             bindings = <&kp RS(RIGHT_WIN)>;
             timeout-ms = <40>;
@@ -281,14 +257,6 @@
             require-prior-idle-ms = <80>;
             key-positions = <55 34 32>;
             layers = <2 3>;
-        };
-
-        combo_rshiftsuper_tv {
-            bindings = <&kp RS(F10)>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <55 34 32>;
-            layers = <4 5>;
         };
 
         combo_rshiftctrlalt_mac {
@@ -336,7 +304,7 @@
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
             key-positions = <25 26>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 1 2 3>;
         };
 
         combo_lalt_mac {
@@ -355,14 +323,6 @@
             layers = <2 3>;
         };
 
-        combo_lalt_tv {
-            bindings = <&kp F11>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <25 28>;
-            layers = <4 5>;
-        };
-
         combo_lsuper_mac {
             bindings = <&kp LEFT_WIN>;
             timeout-ms = <40>;
@@ -377,14 +337,6 @@
             require-prior-idle-ms = <80>;
             key-positions = <25 27>;
             layers = <2 3>;
-        };
-
-        combo_lsuper_tv {
-            bindings = <&kp F10>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <80>;
-            key-positions = <25 27>;
-            layers = <4 5>;
         };
 
         combo_lctrlalt_mac {
@@ -530,6 +482,27 @@
             key-positions = <25 27 28 52>;
             layers = <0 1 2 3>;
         };
+
+        combo_pgup {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <18 30>;
+            layers = <0 2 1 3 4 5>;
+        };
+
+        combo_pgdn {
+            bindings = <&kp PG_DN>;
+            key-positions = <44 30>;
+        };
+
+        combo_home {
+            bindings = <&kp HOME>;
+            key-positions = <43 30>;
+        };
+
+        combo_end {
+            bindings = <&kp END>;
+            key-positions = <44 43>;
+        };
     };
 
     behaviors {
@@ -580,22 +553,22 @@
         m_clmk {
             label = "m_clmk";
             bindings = <
-&kp ESCAPE      &kp N1    &kp N2  &kp N3     &kp N4    &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &lt 6 Q   &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&lt 15 GRAVE    &lt 7 A   &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &kp O             &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
-                                  &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
+&kp ESCAPE      &kp N1   &kp N2  &kp N3     &kp N4    &lt 9 N5                         &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB         &lt 6 Q  &kp W   &kp F      &kp P     &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 10 SEMICOLON  &kp BSLH
+&lt 11 GRAVE    &kp A    &kp R   &kp S      &kp T     &kp D                            &kp H     &kp N      &kp E      &kp I    &kp O             &kp SQT
+&kp LEFT_SHIFT  &lt 8 Z  &kp X   &kp C      &kp V     &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH      &shift_caps
+                                 &kp LCTRL  &kp LGUI  &kp SPACE  &kp RET     &kp LALT  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
 
         m_qwrty {
             display-name = "m_qwrty";
             bindings = <
-&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4    &lt 13 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0         &kp DELETE
-&kp TAB       &lt 6 Q   &kp W   &kp E      &kp R     &kp T                                                   &kp Y          &kp U      &kp I      &kp O    &lt 14 P       &kp BACKSLASH
-&lt 15 GRAVE  &lt 7 A   &kp S   &kp D      &kp F     &kp G                                                   &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHIFT    &lt 12 Z  &kp X   &kp C      &kp V     &kp B            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH   &shift_caps
-                                &kp LCTRL  &kp LGUI  &kp SPACE        &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
+&kp ESC       &kp N1   &kp N2  &kp N3     &kp N4    &lt 9 NUMBER_5                                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0         &kp DELETE
+&kp TAB       &lt 6 Q  &kp W   &kp E      &kp R     &kp T                                                  &kp Y          &kp U      &kp I      &kp O    &lt 10 P       &kp BACKSLASH
+&lt 11 GRAVE  &kp A    &kp S   &kp D      &kp F     &kp G                                                  &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LSHIFT    &lt 8 Z  &kp X   &kp C      &kp V     &kp B           &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH   &shift_caps
+                               &kp LCTRL  &kp LGUI  &kp SPACE       &kp ENTER           &kp LEFT_ALT       &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
             label = "mac_qwerty";
@@ -604,11 +577,11 @@
         w_clmk {
             display-name = "w_clmk";
             bindings = <
-&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4        &lt 13 N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB       &lt 9 Q   &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&lt 15 GRAVE  &lt 10 A  &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &kp O             &kp SQT
-&kp LSHFT     &lt 12 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
-                                &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
+&kp ESC       &kp N1   &kp N2  &kp N3     &kp N4        &lt 9 N5                             &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB       &lt 7 Q  &kp W   &kp F      &kp P         &kp G                                &kp J     &kp L      &kp U      &kp Y    &lt 10 SEMICOLON  &kp BSLH
+&lt 11 GRAVE  &kp A    &kp R   &kp S      &kp T         &kp D                                &kp H     &kp N      &kp E      &kp I    &kp O             &kp SQT
+&kp LSHFT     &lt 8 Z  &kp X   &kp C      &kp V         &kp B      &kp LBKT    &kp RBKT      &kp K     &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH      &shift_caps
+                               &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp RET     &kp LEFT_WIN  &kp BSPC  &kp MINUS  &kp EQUAL
             >;
 
             label = "win_colemak";
@@ -617,11 +590,11 @@
         w_qwrty {
             display-name = "w_qwrty";
             bindings = <
-&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4        &lt 13 N5                             &kp N6         &kp N7     &kp N8     &kp N9   &kp N0         &kp DEL
-&kp TAB         &lt 9 Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 14 P       &kp BSLH
-&lt 15 GRAVE    &lt 10 A  &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH   &shift_caps
-                                  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
+&kp ESC         &kp N1   &kp N2  &kp N3            &kp N4        &lt 9 N5                              &kp N6         &kp N7     &kp N8     &kp N9   &kp N0         &kp DEL
+&kp TAB         &lt 7 Q  &kp W   &kp E             &kp R         &kp T                                 &kp Y          &kp U      &kp I      &kp O    &lt 10 P       &kp BSLH
+&lt 11 GRAVE    &kp A    &kp S   &kp D             &kp F         &kp G                                 &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 8 Z  &kp X   &kp C             &kp V         &kp B      &kp LBKT     &kp RBKT      &kp N          &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH   &shift_caps
+                                 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp LEFT_WIN  &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
 
             label = "win_qwerty";
@@ -631,10 +604,10 @@
             label = "teamviewer_colemak";
             display-name = "t_clmk";
             bindings = <
-&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4   &lt 13 N5                        &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB       &lt 17 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 14 SEMICOLON  &kp BSLH
-&lt 15 GRAVE  &lt 18 A  &kp R   &kp S      &kp T    &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 19 O          &kp SQT
-&kp LSHFT     &lt 12 Z  &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
+&kp ESC       &kp N1    &kp N2  &kp N3     &kp N4   &lt 9 N5                         &kp N6    &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB       &lt 13 Q  &kp W   &kp F      &kp P    &kp G                            &kp J     &kp L      &kp U      &kp Y    &lt 10 SEMICOLON  &kp BSLH
+&lt 11 GRAVE  &lt 14 A  &kp R   &kp S      &kp T    &kp D                            &kp H     &kp N      &kp E      &kp I    &lt 15 O          &kp SQT
+&kp LSHFT     &lt 8 Z   &kp X   &kp C      &kp V    &kp B      &kp LBKT    &kp RBKT  &kp K     &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH      &shift_caps
                                 &kp LCTRL  &kp F11  &kp SPACE  &kp RET     &kp F10   &kp BSPC  &kp MINUS  &kp EQUAL
             >;
         };
@@ -643,10 +616,10 @@
             label = "teamviewer_qwerty";
             display-name = "t_qwrty";
             bindings = <
-&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4   &lt 13 N5                         &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
-&kp TAB         &lt 17 Q  &kp W   &kp E             &kp R    &kp T                             &kp Y          &kp U      &kp I      &kp O    &lt 14 P          &kp BSLH
-&lt 15 GRAVE    &lt 18 A  &kp S   &kp D             &kp F    &kp G                             &kp H          &kp J      &kp K      &kp L    &lt 19 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &lt 12 Z  &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 16 SLASH      &shift_caps
+&kp ESC         &kp N1    &kp N2  &kp N3            &kp N4   &lt 9 N5                          &kp N6         &kp N7     &kp N8     &kp N9   &kp N0            &kp DEL
+&kp TAB         &lt 13 Q  &kp W   &kp E             &kp R    &kp T                             &kp Y          &kp U      &kp I      &kp O    &lt 10 P          &kp BSLH
+&lt 11 GRAVE    &lt 14 A  &kp S   &kp D             &kp F    &kp G                             &kp H          &kp J      &kp K      &kp L    &lt 15 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &lt 8 Z   &kp X   &kp C             &kp V    &kp B      &kp LBKT     &kp RBKT  &kp N          &kp M      &kp COMMA  &kp DOT  &lt 12 SLASH      &shift_caps
                                   &kp LEFT_CONTROL  &kp F11  &kp SPACE  &kp ENTER    &kp F10   &kp BACKSPACE  &kp MINUS  &kp EQUAL
             >;
         };
@@ -664,30 +637,6 @@
             label = "m_arrow";
         };
 
-        mac_nav {
-            bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &kp PG_UP  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans  &trans
-            >;
-
-            label = "mac_nav";
-        };
-
-        mac_nav_rhs {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans         &trans         &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans         &trans         &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans         &trans
-            >;
-
-            label = "m_rnav";
-        };
-
         windows_arrows {
             label = "arrow";
             display-name = "arrow";
@@ -700,29 +649,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        windows_nav {
-            label = "win_nav";
-            bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans                              &kp PG_UP  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans  &trans
-            >;
-        };
-
-        windows_nav_rhs {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans        &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp LEFT_ALT  &kp LEFT_WIN  &kp RCTRL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans        &trans        &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans        &trans
-            >;
-
-            label = "w_rnav";
         };
 
         numpad {
