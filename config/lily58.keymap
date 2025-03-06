@@ -203,7 +203,6 @@
             layers = <2 3>;
         };
 
-
         combo_rctrlsuper_mac {
             bindings = <&kp RC(RIGHT_WIN)>;
             timeout-ms = <40>;
@@ -332,7 +331,6 @@
             layers = <0 1 2 3>;
         };
 
-
         combo_lctrl {
             bindings = <&kp LCTRL>;
             timeout-ms = <40>;
@@ -405,7 +403,6 @@
             layers = <2 3>;
         };
 
-
         combo_lctrlsuper_mac {
             bindings = <&kp LC(LEFT_WIN)>;
             timeout-ms = <40>;
@@ -442,7 +439,7 @@
             bindings = <&kp LS(LCTRL)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 26>;
+            key-positions = <25 26 52>;
             layers = <0 1 2 3 4 5>;
         };
 
@@ -450,7 +447,7 @@
             bindings = <&kp LS(LEFT_ALT)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 27>;
+            key-positions = <25 27 52>;
             layers = <0 1>;
         };
 
@@ -458,7 +455,7 @@
             bindings = <&kp LS(LEFT_ALT)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 28>;
+            key-positions = <25 28 52>;
             layers = <2 3>;
         };
 
@@ -466,7 +463,7 @@
             bindings = <&kp LS(F11)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 28>;
+            key-positions = <25 28 52>;
             layers = <4 5>;
         };
 
@@ -474,7 +471,7 @@
             bindings = <&kp LS(LEFT_WIN)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 28>;
+            key-positions = <25 28 52>;
             layers = <0 1>;
         };
 
@@ -482,7 +479,7 @@
             bindings = <&kp LS(LEFT_WIN)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 27>;
+            key-positions = <25 27 52>;
             layers = <2 3>;
         };
 
@@ -490,7 +487,7 @@
             bindings = <&kp LS(F10)>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 27>;
+            key-positions = <25 27 52>;
             layers = <4 5>;
         };
 
@@ -498,7 +495,7 @@
             bindings = <&kp LS(LA(LCTRL))>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 26 27>;
+            key-positions = <25 26 27 52>;
             layers = <0 1>;
         };
 
@@ -506,7 +503,7 @@
             bindings = <&kp LS(LA(LCTRL))>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 26 28>;
+            key-positions = <25 26 28 52>;
             layers = <2 3>;
         };
 
@@ -514,7 +511,7 @@
             bindings = <&kp LS(LC(LEFT_WIN))>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 26 28>;
+            key-positions = <25 26 28 52>;
             layers = <0 1>;
         };
 
@@ -522,7 +519,7 @@
             bindings = <&kp LS(LC(LEFT_WIN))>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 26 27>;
+            key-positions = <25 26 27 52>;
             layers = <2 3>;
         };
 
@@ -530,11 +527,9 @@
             bindings = <&kp LS(LA(LEFT_WIN))>;
             timeout-ms = <40>;
             require-prior-idle-ms = <80>;
-            key-positions = <39 25 27 28>;
+            key-positions = <25 27 28 52>;
             layers = <0 1 2 3>;
         };
-
-
     };
 
     behaviors {
