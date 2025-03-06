@@ -485,23 +485,34 @@
 
         combo_pgup {
             bindings = <&kp PAGE_UP>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <80>;
             key-positions = <18 30>;
             layers = <0 2 1 3 4 5>;
         };
 
         combo_pgdn {
             bindings = <&kp PG_DN>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <80>;
             key-positions = <44 30>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_home {
             bindings = <&kp HOME>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <80>;
             key-positions = <43 30>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_end {
             bindings = <&kp END>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <80>;
             key-positions = <44 43>;
+            layers = <0 2 1 3 4 5>;
         };
     };
 
