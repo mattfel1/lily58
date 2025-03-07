@@ -150,41 +150,6 @@
             bindings = <&kp END>;
             key-positions = <44 43>;
         };
-
-        combo_f20 {
-            bindings = <&kp F20>;
-            key-positions = <1 2>;
-        };
-
-        combo_f21 {
-            bindings = <&kp F21>;
-            key-positions = <26 25>;
-        };
-
-        combo_f22 {
-            bindings = <&kp F22>;
-            key-positions = <37 38>;
-        };
-
-        combo_f23 {
-            bindings = <&kp F23>;
-            key-positions = <3 4>;
-        };
-
-        combo_f17 {
-            bindings = <&kp F17>;
-            key-positions = <15 16>;
-        };
-
-        combo_f18 {
-            bindings = <&kp F18>;
-            key-positions = <27 28>;
-        };
-
-        combo_f19 {
-            bindings = <&kp F19>;
-            key-positions = <40 39>;
-        };
     };
 
     behaviors {
