@@ -151,14 +151,9 @@
             key-positions = <44 43>;
         };
 
-        combo_f15 {
-            bindings = <&kp F15>;
-            key-positions = <1 2>;
-        };
-
         combo_f20 {
             bindings = <&kp F20>;
-            key-positions = <13 14>;
+            key-positions = <1 2>;
         };
 
         combo_f21 {
@@ -171,8 +166,8 @@
             key-positions = <37 38>;
         };
 
-        combo_f16 {
-            bindings = <&kp F15>;
+        combo_f23 {
+            bindings = <&kp F23>;
             key-positions = <3 4>;
         };
 
