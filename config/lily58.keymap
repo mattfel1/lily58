@@ -121,8 +121,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 10000>,
-                <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT>;
+                <&macro_tap_time 1>,
+                <&kp C &kp A &kp F &kp F &kp E &kp I &kp N &kp A &kp T &kp E &kp SPACE &kp MINUS &kp D>;
 
             label = "STAY_AWAKE";
         };
