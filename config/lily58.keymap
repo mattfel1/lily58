@@ -8,7 +8,7 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <165>;
-    require-prior-idle-ms = <103>;
+    require-prior-idle-ms = <115>;
 };
 
 / {
