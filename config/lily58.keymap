@@ -284,7 +284,7 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                              &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &test_cmd        &stay_awake  &llvm_errs
+&trans  &trans  &trans     &trans        &trans        &llvm_errs                          &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &test_cmd        &stay_awake  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans       &trans
 &trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans       &trans
 &trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans       &trans
