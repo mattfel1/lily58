@@ -112,7 +112,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U &kp SPACE &kp D &kp A &kp G>;
+                <&none &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp T &kp E &kp S &kp T &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp R &kp D &kp U>;
 
             label = "TEST_CMD";
         };
@@ -135,6 +135,13 @@
                 <&none &kp L &kp L &kp V &kp M &kp COLON &kp COLON &kp E &kp R &kp R &kp S &kp LPAR &kp RPAR &kp SPACE &kp LT &kp LT &kp SPACE &kp SPACE &kp LT &kp LT &kp SPACE &kp DQT &kp BSLH &kp N &kp DQT &kp SEMI &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LC(LEFT) &kp LEFT>;
 
             label = "LLVM_ERRS";
+        };
+
+        cl_very_verbose: cl_very_verbose {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp N &kp COLON &kp COLON &kp C &kp L &kp UNDER &kp V &kp E &kp R &kp Y &kp UNDER &kp V &kp E &kp R &kp B &kp O &kp S &kp E &kp SPACE &kp EQUAL &kp SPACE &kp T &kp R &kp U &kp E &kp SEMI &kp RET>;
+            label = "CL_VERY_VERBOSE";
         };
     };
 
@@ -284,11 +291,11 @@
         mac_arrows {
             display-name = "arrow";
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &llvm_errs                          &cerr_keystroke  &debug_keystroke  &iostream_keystroke  &test_cmd        &stay_awake  &trans
-&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans           &trans            &kp UP_ARROW         &trans           &trans       &trans
-&trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP        &kp LEFT_ARROW    &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans       &trans
-&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN        &trans            &trans               &trans           &trans       &trans
-                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans           &trans            &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &trans     &trans          &trans          &trans           &mo 20  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &trans                              &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans                              &kp PG_UP  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans        &trans        &trans          &trans    &kp HOME  &kp PG_DN  &trans          &trans          &trans           &trans  &trans
+                           &trans        &trans        &kp LEFT_SHIFT  &trans    &kp END   &trans     &trans          &trans
             >;
 
             label = "m_arrow";
@@ -448,6 +455,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans           &kp F11  &kp F10  &kp RCTRL  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans   &trans   &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &kp RIGHT_SHIFT  &trans   &trans
+            >;
+        };
+
+        macros {
+            bindings = <
+&trans  &trans  &trans            &trans           &trans            &trans                    &trans  &trans      &trans  &trans               &trans  &trans
+&trans  &trans  &trans            &trans           &trans            &trans                    &trans  &llvm_errs  &trans  &trans               &trans  &trans
+&trans  &trans  &debug_keystroke  &cerr_keystroke  &test_cmd         &trans                    &trans  &trans      &trans  &iostream_keystroke  &trans  &trans
+&trans  &trans  &trans            &stay_awake      &cl_very_verbose  &trans  &trans    &trans  &trans  &trans      &trans  &trans               &trans  &trans
+                                  &trans           &trans            &trans  &trans    &trans  &trans  &trans      &trans
             >;
         };
     };
