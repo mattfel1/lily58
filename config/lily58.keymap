@@ -142,7 +142,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 1>,
-                <&none &kp S &kp N &kp COLON &kp COLON &kp C &kp L &kp UNDER &kp V &kp E &kp R &kp Y &kp UNDER &kp V &kp E &kp R &kp B &kp O &kp S &kp E &kp SPACE &kp EQUAL &kp SPACE &kp T &kp R &kp U &kp E &kp SEMI &kp RET>;
+                <&none &kp S &kp N &kp COLON &kp COLON &kp C &kp L &kp UNDER &kp V &kp E &kp R &kp Y &kp UNDER &kp V &kp E &kp R &kp B &kp O &kp S &kp E &kp SPACE &kp EQUAL &kp SPACE &kp T &kp R &kp U &kp E &kp SEMI>;
 
             label = "SN_CL_VERY_VERBOSE";
         };
