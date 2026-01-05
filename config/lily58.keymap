@@ -146,6 +146,26 @@
 
             label = "SN_CL_VERY_VERBOSE";
         };
+
+        tolanerhel: tolanerhel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 1>,
+                <&none &kp T &kp O &kp L &kp A &kp N &kp E &kp R &kp H &kp E &kp L &kp SPACE>;
+
+            label = "TOLANERHEL";
+        };
+
+        dockerssh2: dockerssh2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 1>,
+                <&none &kp B &kp A &kp S &kp H &kp SPACE &kp TILDE &kp FSLH &kp S &kp C &kp R &kp I &kp P &kp T &kp S &kp FSLH &kp D &kp O &kp C &kp K &kp E &kp R &kp UNDER &kp S &kp S &kp H &kp N2 &kp DOT &kp S &kp H &kp RET>;
+
+            label = "DOCKERSSH2";
+        };
     };
 
     combos {
@@ -463,11 +483,11 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans            &trans           &trans               &trans                    &trans  &trans      &trans  &trans               &trans  &trans
-&trans  &trans  &trans            &trans           &trans               &trans                    &trans  &llvm_errs  &trans  &trans               &trans  &trans
-&trans  &trans  &debug_keystroke  &cerr_keystroke  &test_cmd            &trans                    &trans  &trans      &trans  &iostream_keystroke  &trans  &trans
-&trans  &trans  &trans            &stay_awake      &sn_cl_very_verbose  &trans  &trans    &trans  &trans  &trans      &trans  &trans               &trans  &trans
-                                  &trans           &trans               &trans  &trans    &trans  &trans  &trans      &trans
+&trans  &trans  &trans            &trans           &trans               &trans                         &trans  &trans      &trans  &trans               &trans       &trans
+&trans  &trans  &trans            &trans           &trans               &trans                         &trans  &llvm_errs  &trans  &trans               &trans       &trans
+&trans  &trans  &debug_keystroke  &cerr_keystroke  &test_cmd            &dockerssh2                    &trans  &trans      &trans  &iostream_keystroke  &tolanerhel  &trans
+&trans  &trans  &trans            &stay_awake      &sn_cl_very_verbose  &trans       &trans    &trans  &trans  &trans      &trans  &trans               &trans       &trans
+                                  &trans           &trans               &trans       &trans    &trans  &trans  &trans      &trans
             >;
         };
     };
