@@ -172,7 +172,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_wait_time 1>,
-                <&none &kp RG(R) &kp R &kp A &kp I &kp L &kp UNDER &kp G &kp E &kp N &kp RET &kp RG(R) &kp R &kp E &kp P &kp O &kp R &kp T &kp S &kp RET &kp RG(R) &kp LS(F) &kp I &kp N &kp A &kp L &kp DOT &kp R &kp E &kp P &kp O &kp R &kp T &kp RET>;
+                <&none &kp RG(R) &kp R &kp A &kp I &kp L &kp UNDER &kp G &kp E &kp N &kp RET &kp ENTER &kp RG(R) &kp R &kp E &kp P &kp O &kp R &kp T &kp S &kp RET &kp ENTER &kp RG(R) &kp LS(F) &kp I &kp N &kp A &kp L &kp DOT &kp R &kp E &kp P &kp O &kp R &kp T &kp RET &kp ENTER>;
 
             label = "FINAL_REPORT";
         };
@@ -182,7 +182,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_wait_time 1>,
-                <&none &kp RG(R) &kp R &kp A &kp I &kp L &kp UNDER &kp G &kp E &kp N &kp RET &kp RG(R) &kp R &kp E &kp P &kp O &kp R &kp T &kp S &kp RET &kp RG(R) &kp LS(S) &kp U &kp M &kp M &kp A &kp R &kp Y &kp DOT &kp R &kp E &kp P &kp O &kp R &kp T &kp RET>;
+                <&none &kp RG(R) &kp R &kp A &kp I &kp L &kp UNDER &kp G &kp E &kp N &kp RET &kp ENTER &kp RG(R) &kp R &kp E &kp P &kp O &kp R &kp T &kp S &kp RET &kp ENTER &kp RG(R) &kp LS(S) &kp U &kp M &kp M &kp A &kp R &kp Y &kp DOT &kp R &kp E &kp P &kp O &kp R &kp T &kp RET &kp ENTER>;
 
             label = "SUMMARY_REPORT";
         };
