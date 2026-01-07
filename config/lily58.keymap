@@ -176,6 +176,16 @@
 
             label = "FINAL_REPORT";
         };
+
+        summary_report: summary_report {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 1>,
+                <&none &kp RG(R) &kp R &kp A &kp I &kp L &kp UNDER &kp G &kp E &kp N &kp RET &kp RG(R) &kp R &kp E &kp P &kp O &kp R &kp T &kp S &kp RET &kp RG(R) &kp LS(S) &kp U &kp M &kp M &kp A &kp R &kp Y &kp DOT &kp R &kp E &kp P &kp O &kp R &kp T &kp RET>;
+
+            label = "SUMMARY_REPORT";
+        };
     };
 
     combos {
@@ -493,10 +503,10 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans            &trans           &trans               &trans                         &trans  &trans      &trans  &trans               &trans       &trans
-&trans  &trans  &trans            &final_report    &trans               &trans                         &trans  &llvm_errs  &trans  &trans               &trans       &trans
-&trans  &trans  &debug_keystroke  &cerr_keystroke  &test_cmd            &dockerssh2                    &trans  &trans      &trans  &iostream_keystroke  &tolanerhel  &trans
-&trans  &trans  &trans            &stay_awake      &sn_cl_very_verbose  &trans       &trans    &trans  &trans  &trans      &trans  &trans               &trans       &trans
+&trans  &trans  &trans            &trans           &trans               &trans                         &trans  &trans      &trans           &trans               &trans       &trans
+&trans  &trans  &trans            &final_report    &trans               &trans                         &trans  &llvm_errs  &summary_report  &trans               &trans       &trans
+&trans  &trans  &debug_keystroke  &cerr_keystroke  &test_cmd            &dockerssh2                    &trans  &trans      &trans           &iostream_keystroke  &tolanerhel  &trans
+&trans  &trans  &trans            &stay_awake      &sn_cl_very_verbose  &trans       &trans    &trans  &trans  &trans      &trans           &trans               &trans       &trans
                                   &trans           &trans               &trans       &trans    &trans  &trans  &trans      &trans
             >;
         };
